@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kqa-q6-VzM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ge1-OO-EMb">
+            <objects>
+                <tabBarController id="Kqa-q6-VzM" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ugm-nz-nrO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="h7Y-5G-daG" kind="relationship" relationship="viewControllers" id="1Zw-LS-eGR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ng-Iy-MO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3198" y="-183"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Rnk-SF-TXw">
+            <objects>
+                <navigationController id="h7Y-5G-daG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="amV-ml-JWY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gK1-SX-rPc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YKb-EJ-Ewy" kind="relationship" relationship="rootViewController" id="Ygz-MS-p0m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdb-Fb-C6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2110" y="-183"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="99c-3J-GAO">
+            <objects>
+                <viewController id="YKb-EJ-Ewy" customClass="ViewController" customModule="ECG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4RF-5L-ETX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L3k-dU-VBA">
+                                <rect key="frame" x="10" y="100" width="394" height="323"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-59-hyQ">
+                                <rect key="frame" x="20" y="743" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GIy-n6-dDJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Scan ECG"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-lN-EK8">
+                                <rect key="frame" x="10" y="433" width="394" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="qVz-Pw-kxt"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xAa-b9-jgW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xAa-b9-jgW" firstAttribute="bottom" secondItem="HgH-59-hyQ" secondAttribute="bottom" constant="20" id="1G0-ma-MC5"/>
+                            <constraint firstAttribute="trailing" secondItem="HgH-59-hyQ" secondAttribute="trailing" constant="20" id="1Sk-Rm-wyu"/>
+                            <constraint firstItem="UdD-lN-EK8" firstAttribute="leading" secondItem="xAa-b9-jgW" secondAttribute="leading" constant="10" id="DKC-bU-PIF"/>
+                            <constraint firstItem="HgH-59-hyQ" firstAttribute="top" secondItem="UdD-lN-EK8" secondAttribute="bottom" constant="10" id="K4t-KD-U8J"/>
+                            <constraint firstItem="L3k-dU-VBA" firstAttribute="top" secondItem="4RF-5L-ETX" secondAttribute="top" constant="100" id="Sdf-Ry-IUl"/>
+                            <constraint firstItem="UdD-lN-EK8" firstAttribute="top" secondItem="L3k-dU-VBA" secondAttribute="bottom" constant="10" id="SmR-df-n8y"/>
+                            <constraint firstItem="L3k-dU-VBA" firstAttribute="leading" secondItem="xAa-b9-jgW" secondAttribute="leading" constant="10" id="WHP-py-uh9"/>
+                            <constraint firstItem="HgH-59-hyQ" firstAttribute="leading" secondItem="xAa-b9-jgW" secondAttribute="leading" constant="20" id="hev-Kv-8H9"/>
+                            <constraint firstAttribute="trailing" secondItem="L3k-dU-VBA" secondAttribute="trailing" constant="10" id="riq-q2-6bR"/>
+                            <constraint firstAttribute="trailing" secondItem="UdD-lN-EK8" secondAttribute="trailing" constant="10" id="wXW-qt-5Bi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iyT-wD-NvG"/>
+                    <connections>
+                        <outlet property="capturedImage" destination="L3k-dU-VBA" id="J3h-5H-7cT"/>
+                        <outlet property="resultLabel" destination="UdD-lN-EK8" id="NDM-3r-fHV"/>
+                        <outlet property="scanButton" destination="HgH-59-hyQ" id="e7a-kl-ury"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdh-LA-FnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962.31884057971024" y="-183.48214285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
