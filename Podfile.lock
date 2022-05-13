@@ -1,0 +1,20 @@
+PODS:
+  - LibTorch-Lite (1.10.0):
+    - LibTorch-Lite/Core (= 1.10.0)
+  - LibTorch-Lite/Core (1.10.0):
+    - LibTorch-Lite/Torch
+  - LibTorch-Lite/Torch (1.10.0)
+
+DEPENDENCIES:
+  - LibTorch-Lite
+
+SPEC REPOS:
+  trunk:
+    - LibTorch-Lite
+
+SPEC CHECKSUMS:
+  LibTorch-Lite: 1e06028172ee5aecc12a01da6e6f3fe0bc3541c6
+
+PODFILE CHECKSUM: e6912007e4ccb565525374dc3715044b8e881de5
+
+COCOAPODS: 1.11.2
