@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     var capturedImageList : [UIImage] = []
     
     private lazy var module: TorchModule = {
-        if let filePath = Bundle.main.path(forResource: "model_lit", ofType: "pt"),
+        if let filePath = Bundle.main.path(forResource: "model_lit1", ofType: "pt"),
             let module = TorchModule(fileAtPath: filePath) {
             return module
         } else {
@@ -37,6 +37,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ECG graph classification"
+        
+        resultLabel.isUserInteractionEnabled = false
         
         capturedImage.layer.masksToBounds = true
         capturedImage.layer.borderWidth = 0.5

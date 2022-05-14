@@ -16,8 +16,8 @@
 		F188A996282EBD4F004B0772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F188A994282EBD4F004B0772 /* LaunchScreen.storyboard */; };
 		F188A9A5282EE41A004B0772 /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = F188A9A4282EE41A004B0772 /* TorchModule.mm */; };
 		F188A9AA282F05F1004B0772 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F188A9A9282F05F1004B0772 /* Utils.swift */; };
-		F188A9AD282F0751004B0772 /* model_lit.pt in Resources */ = {isa = PBXBuildFile; fileRef = F188A9AC282F0751004B0772 /* model_lit.pt */; };
 		F188A9AF282F0758004B0772 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = F188A9AE282F0758004B0772 /* words.txt */; };
+		F188A9B3282F51C2004B0772 /* model_lit1.pt in Resources */ = {isa = PBXBuildFile; fileRef = F188A9B2282F51C2004B0772 /* model_lit1.pt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		F188A9A4282EE41A004B0772 /* TorchModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
 		F188A9A6282EE426004B0772 /* ECG-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ECG-Bridging-Header.h"; sourceTree = "<group>"; };
 		F188A9A9282F05F1004B0772 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		F188A9AC282F0751004B0772 /* model_lit.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_lit.pt; sourceTree = "<group>"; };
 		F188A9AE282F0758004B0772 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		F188A9B2282F51C2004B0772 /* model_lit1.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_lit1.pt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				F188A9AE282F0758004B0772 /* words.txt */,
-				F188A9AC282F0751004B0772 /* model_lit.pt */,
+				F188A9B2282F51C2004B0772 /* model_lit1.pt */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 				F188A993282EBD4F004B0772 /* Assets.xcassets in Resources */,
 				F188A991282EBD4E004B0772 /* Main.storyboard in Resources */,
 				F188A9AF282F0758004B0772 /* words.txt in Resources */,
-				F188A9AD282F0751004B0772 /* model_lit.pt in Resources */,
+				F188A9B3282F51C2004B0772 /* model_lit1.pt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
