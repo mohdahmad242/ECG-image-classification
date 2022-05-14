@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         if (capturedImageList.count == 0){
             capturedImage.image = UIImage(systemName: "photo.on.rectangle")
             
-            resultLabel.text = "Please Scan your ECG."
+            resultLabel.text = "Please scan your ECG."
         }
         scanButton.addTarget(self, action: #selector(configureDocumentView), for: .touchUpInside)
 
@@ -71,15 +71,13 @@ class ViewController: UIViewController {
         guard let outputs = module.predict(image: UnsafeMutableRawPointer(&pixelBuffer)) else {
             return
         }
-        print("The prediction is -- ")
-        print(outputs)
         
         let zippedResults = zip(labels.indices, outputs)
-        let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(3)
-        var text = ""
+        let sortedResults = zippedResults.sorted { $0.1.floatValue > $1.1.floatValue }.prefix(2)
+        
+        var text = "Top two results of above ECG graph.\n\n \n\n"
         for result in sortedResults {
-            print(result)
-            text += "\u{2022} \(labels[result.0]) (\(result.1)) \n\n"
+            text += "\u{2022} \(labels[result.0]) \n\n"
         }
         
         capturedImage.image = ecgImage
